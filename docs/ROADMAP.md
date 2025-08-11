@@ -1,0 +1,19 @@
+## Roadmap (Chunks)
+- Chunk 1 – Project Bootstrap (✅)
+- Chunk 2 – Domain Models (stubs)
+- Chunk 3 – FX Utility
+- Chunk 4 – Loyalty Engine
+- Chunk 5 – Payment Processor (Mock)
+- Chunk 6 – Offers Engine (Rule‑based)
+- Chunk 7 – Checkout API
+- Chunk 8 – Wallet APIs
+- Chunk 9 – Partner Ecosystem
+- Chunk 10 – Disruption/Compensation
+- Chunk 11 – Idempotency
+- Chunk 12 – Auth & Multi‑Tenancy
+- Chunk 13 – Observability
+- Chunk 14 – Config & Feature Flags
+- Chunk 15 – Test Suite
+- Chunk 16 – CLI & Seed Data
+- Chunk 17 – Packaging & Docker
+- Chunk 18 – Developer UX
