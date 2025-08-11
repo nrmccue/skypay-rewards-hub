@@ -54,7 +54,13 @@ def checkout(req: CheckoutRequest):
         user["points"] -= points_redeemed
 
     cash_due_usd = round(max(0.0, subtotal_usd - discount_usd), 2)
-    payment = {"tx_id": f"pay_{uuid.uuid4().hex[:8]}", "status": "approved", "amount_usd": cash_due_usd, "method": req.payment_method}
+payment = {
+    "tx_id": f"pay_{uuid.uuid4().hex[:8]}",
+    "status": "approved",
+    "amount_usd": cash_due_usd,
+    "method": req.payment_method
+}
+
 
     # Earn points on cash portion only
     points_earned = 0
