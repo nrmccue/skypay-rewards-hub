@@ -7,9 +7,23 @@ router = APIRouter()
 
 # In-memory demo users
 USERS: Dict[str, dict] = {
-    "u_alex": {"user_id": "u_alex", "name": "Alex Johnson", "tier": "gold", "points": 8200, "history": [], "travel_credits": []},
-    "u_bailey": {"user_id": "u_bailey", "name": "Bailey Kim", "tier": "silver", "points": 1200, "history": [], "travel_credits": []},
+"u_alex": {
+    "user_id": "u_alex",
+    "name": "Alex Johnson",
+    "tier": "gold",
+    "points": 8200,
+    "history": [],
+    "travel_credits": []
+},
+"u_bailey": {
+    "user_id": "u_bailey",
+    "name": "Bailey Kim",
+    "tier": "silver",
+    "points": 1200,
+    "history": [],
+    "travel_credits": []
 }
+
 
 class RedeemRequest(BaseModel):
     points: int
