@@ -61,15 +61,16 @@ def checkout(req: CheckoutRequest):
         "method": req.payment_method,
     }
 
-    # Earn points on cash portion only, proportional by category
-    points_earned = 0
-    if cash_due_usd > 0:
-        for it in req.items:
-            cat_amount_usd = it.price * it.qty * FX[req.currency]
-            share = cat_amount_usd / subtotal_usd if subtotal_usd else 0
-            earn_base = cash_due_usd * share
-            rate = EARN_RATE.get(it.category, 1.0)
-            points_earned += int(earn_base * rate)
+# Earn points on cash portion only, proportional by category
+points_earned = 0
+if cash_due_usd > 0:
+    for it in req.items:
+        cat_amount_usd = it.price * it.qty * FX[req.currency]
+        share = cat_amount_usd / subtotal_usd if subtotal_usd else 0
+        earn_base = cash_due_usd * share
+        rate = EARN_RATE.get(it.category, 1.0)
+        points_earned += int(earn_base * rate)
+
 
     user["points"] += points_earned
 
